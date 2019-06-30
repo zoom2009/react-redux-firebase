@@ -23,11 +23,11 @@ export default class SignIn extends Component {
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Sign In</h5>
                     <div className="input-field">
-                        <input type="email" id="email" onChange={this.handleChange}/>
+                        <input required type="email" id="email" onChange={this.handleChange}/>
                         <label htmlFor="email">Email</label>
                     </div>
                     <div className="input-field">
-                        <input type="password" id="password" onChange={this.handleChange}/>
+                        <input required type="password" id="password" onChange={this.handleChange}/>
                         <label htmlFor="password">Password</label>
                     </div>
                     <div className="input-field">

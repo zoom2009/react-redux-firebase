@@ -23,11 +23,11 @@ export default class CreateProject extends Component {
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Create new project</h5>
                     <div className="input-field">
-                        <input type="text" id="title" onChange={this.handleChange}/>
+                        <input required type="text" id="title" onChange={this.handleChange}/>
                         <label htmlFor="title">Project Title</label>
                     </div>
                     <div className="input-field">
-                        <textarea id="content" className="materialize-textarea" onChange={this.handleChange}/>
+                        <textarea required id="content" className="materialize-textarea" onChange={this.handleChange}/>
                         <label htmlFor="content">Project Content</label>
                     </div>
                     <div className="input-field">
