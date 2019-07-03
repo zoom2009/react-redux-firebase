@@ -1,11 +1,14 @@
 import React from 'react'
+import moment from 'moment'
 
-export default ({ title, content }) => (
+const ProjectSummary = ({ title, createdAt, authorFirstName, authorLastName }) => (
     <div className="card z-depth-0 project-summary">
         <div className="card-content gery-text text-darken-3">
             <span className="card-title">{title}</span>
-            <p>{content}</p>
-            <p className="grey-text">30th June, 9pm</p>
+            <p>Posted by {authorFirstName} {authorLastName}</p>
+            <p className="grey-text">{moment(createdAt.toDate().toString()).calendar()}</p>
         </div>
     </div>
 )
+
+export default ProjectSummary
