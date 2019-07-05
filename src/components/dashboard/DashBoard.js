@@ -25,14 +25,11 @@ class DashBoard extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    console.log('state : ', state)
-    return {
-        projects: state.firestore.ordered.projects,
-        auth: state.firebase.auth,
-        notifications: state.firestore.ordered.notifications,
-    }
-}
+const mapStateToProps = (state) => ({
+    projects: state.firestore.ordered.projects,
+    auth: state.firebase.auth,
+    notifications: state.firestore.ordered.notifications,
+})
 
 export default compose(
     connect(mapStateToProps),

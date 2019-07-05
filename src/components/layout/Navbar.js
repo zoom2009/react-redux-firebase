@@ -1,21 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 import { connect } from 'react-redux'
+import { Navbar } from 'react-materialize'
 
-const Navbar = (props) => {
+const NavbarComponent = (props) => {
     const { auth } = props
     const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks />
     return(
-        <nav>
-            <div className="nav-wrapper grey darken-3">
-                <div className="container">
-                    <Link to='/' className="brand-logo">Sikarin</Link>
-                    {links}
-                </div>
-            </div>
-        </nav>
+        <Navbar className="grey darken-3" brand={<a style={{padding: '0 10px'}}>Sikarin</a>} alignLinks="right">
+            {links}
+        </Navbar>
     )
 }
 
@@ -23,4 +18,4 @@ const mapStateToprops = (state) => ({
     auth: state.firebase.auth
 })
 
-export default connect(mapStateToprops)(Navbar)
+export default connect(mapStateToprops)(NavbarComponent)

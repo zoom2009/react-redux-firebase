@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 import moment from 'moment'
 
-const Notifications = (props) => {
-    const { notifications } = props
-    return(
+export default class Notifications extends Component {
+    state = {
+        refreshPageCount: 0
+    }
+
+    componentDidMount() {
+        this.intervalId = setInterval(() => {
+            this.setState({ refreshPageCount: this.state.refreshPageCount+1 })
+        }, 3000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId)
+    }
+
+    render() {
+        const { notifications } = this.props
+        return (
         <div className="section">
             <div className="card z-depth-0">
                 <div className="card-content">
@@ -24,7 +39,6 @@ const Notifications = (props) => {
                 </div>
             </div>
         </div>
-    )
+        )
+    }
 }
-
-export default Notifications

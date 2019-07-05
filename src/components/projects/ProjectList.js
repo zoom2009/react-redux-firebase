@@ -6,7 +6,6 @@ export default ({projects}) => (
     <div className="project-list section">
         {
             projects && projects.map((e, i) => {
-                console.log('e : ', e)
                 return (
                 <Link to={'/project/' + e.id} key={e.id}>
                 <ProjectSummary

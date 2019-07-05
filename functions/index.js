@@ -29,6 +29,7 @@ exports.userJoined = functions.auth.user()
         return admin.firestore().collection('users')
             .doc(user.uid).get().then(doc => {
                 const newUser = doc.data()
+                console.log('user is : ', newUser)
                 const notification = {
                     content: 'Joined the party',
                     user: `${newUser.firstName} ${newUser.lastName}`,

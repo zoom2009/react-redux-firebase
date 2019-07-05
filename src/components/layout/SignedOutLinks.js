@@ -1,9 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default () => (
-    <ul className="right">
-        <li><NavLink to='/signup'>Signup</NavLink></li>
-        <li><NavLink to='/signin'>Login</NavLink></li>
-    </ul>
+    <div>
+        <li className="sidenav-close"><Link to='/signup'>Signup</Link></li>
+        <li className="sidenav-close"><Link to='/signin'>Login</Link></li>
+    </div>
 )

@@ -6,11 +6,13 @@ import ProjectDetails from './components/projects/ProjectDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateProject from './components/projects/CreateProject'
+import Favicon from 'react-favicon';
 
 export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
+        <Favicon url={require('./card.jpg')} />
         <div className="App">
           <Navbar />
           <Switch>
