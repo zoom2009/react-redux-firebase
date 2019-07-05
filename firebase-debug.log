@@ -1,0 +1,16 @@
+[debug] [2019-07-05T16:37:12.155Z] ----------------------------------------------------------------------
+[debug] [2019-07-05T16:37:12.157Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-07-05T16:37:12.157Z] CLI Version:   7.0.2
+[debug] [2019-07-05T16:37:12.157Z] Platform:      darwin
+[debug] [2019-07-05T16:37:12.157Z] Node Version:  v10.15.0
+[debug] [2019-07-05T16:37:12.158Z] Time:          Fri Jul 05 2019 23:37:12 GMT+0700 (Indochina Time)
+[debug] [2019-07-05T16:37:12.158Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-05T16:37:12.171Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-05T16:37:12.172Z] > authorizing via signed-in user
+[debug] [2019-07-05T16:37:12.172Z] [iam] checking project react-redux-firebase-9eabb for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-07-05T16:37:12.174Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-redux-firebase-9eabb:testIamPermissions  
+
+[debug] [2019-07-05T16:37:15.281Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-05T16:37:15.284Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/react-redux-firebase-9eabb  
+ 

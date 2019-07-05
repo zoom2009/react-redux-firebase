@@ -11,7 +11,7 @@ const SignedInLinks = (props) => {
         <div>
             <li className="sidenav-close"><Link to='/create-project'>New Project</Link></li>
             <li className="sidenav-close" style={{ cursor: 'pointer' }}><a onClick={props.signOut}>Log Out</a></li>
-            <NavLink className="sidenav-close" style={{marginLeft: 30}} to='/' className='btn btn-floating pink lighten-1 text-center'>{shortName}</NavLink>
+            <NavLink style={{marginLeft: 30}} to='/' className='sidenav-close btn btn-floating pink lighten-1 text-center'>{shortName}</NavLink>
         </div>
     )
 }

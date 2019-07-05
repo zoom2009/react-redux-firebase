@@ -26,7 +26,7 @@ class SignUp extends Component {
         const { auth, authError } = this.props
         if(auth.uid) return <Redirect to={'/'} />
         return (
-            <div className="container">
+            <div style={{marginTop: -20}} className="container">
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
